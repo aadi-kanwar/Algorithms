@@ -27,17 +27,11 @@ public:
         newElement.priority = priority;
 
         int i = size - 1;
-        // while (i >= 0 && arr[i].priority > newElement.priority) {
-        //     arr[i + 1] = arr[i];
-        //     i--;
-        // }
-
         arr[i + 1] = newElement;
         size++;
     }
 
     void sort() {
-        // Sorting logic remains the same
         for (int i = 1; i < size; i++) {
             Element key = arr[i];
             int j = i - 1;
@@ -52,10 +46,9 @@ public:
     }
 
     int dequeue() {
-        // Dequeue logic remains the same
         if (size == 0) {
             std::cout << "Queue is empty. Cannot dequeue any elements." << std::endl;
-            return -1; // or any other appropriate value to indicate an empty queue
+            return -1; 
         }
 
         int dequeuedValue = arr[0].value;
