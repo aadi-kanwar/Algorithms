@@ -73,15 +73,15 @@ public:
 int main() {
     PriorityQueue pq;
 
-    pq.enqueue(5, 2);
-    pq.enqueue(2, 1);
-    pq.enqueue(8, 3);
-    pq.enqueue(1, 1);
-    pq.enqueue(3, 2);
+    pq.enqueue('A', 35);
+    pq.enqueue('B', 42);
+    pq.enqueue('C', 60);
+    pq.enqueue('D', 82);
+    pq.enqueue('E', 20);
 
     std::cout << "Elements before sorting: ";
     for (int i = 0; i < pq.size; i++) {
-        std::cout << pq.arr[i].value << " ";
+        std::cout << (char)pq.arr[i].value << " ";
     }
     std::cout << std::endl;
 
@@ -89,13 +89,13 @@ int main() {
 
     std::cout << "Elements after sorting: ";
     for (int i = 0; i < pq.size; i++) {
-        std::cout << pq.arr[i].value << " ";
+        std::cout << (char)pq.arr[i].value << " ";
     }
     std::cout << std::endl;
 
     std::cout << "Dequeued element: " << std::endl;
     for (int i = 0; i < 5; i++) {
-        std::cout << pq.dequeue() << " ";
+        std::cout << (char)pq.dequeue() << " ";
     }
     return 0;
 }
