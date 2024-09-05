@@ -1,0 +1,2 @@
+// A* ALgorithm
+// A* Algorithm is a popular pathfinding algorithm that is used in many applications. It is an extension of Dijkstra's algorithm with a heuristic function to find the shortest path between two points. The algorithm uses a priority queue to store the nodes and their respective costs. The nodes with the lowest cost are explored first. The algorithm terminates when the goal node is reached or when all nodes have been explored.

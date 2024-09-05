@@ -1,3 +1,7 @@
+// Priority Queue implementation using array
+// Program to showcase enqueue and dequeue operations on a priority queue
+// 04.09.2024
+
 #include <iostream>
 
 const int MAX_SIZE = 20;
