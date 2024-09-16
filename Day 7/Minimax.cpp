@@ -1,3 +1,6 @@
+// MiniMax Algorithm for Game Theory
+//11.09.2024
+
 #include <iostream>
 #include <climits>
 
