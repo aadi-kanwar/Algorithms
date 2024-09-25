@@ -12,24 +12,30 @@ const int var = 4;
 const int col = 3;
 const string COLORS[col] = {"Red", "Green", "Blue"};
 
-bool isSafe(int v, int color[], int graph[var][var], int c) {
+bool isSafe(int v, int color[], int graph[var][var], int c) 
+{
     for (int i = 0; i < var; i++) {
-        if (graph[v][i] && color[i] == c) {
+        if (graph[v][i] && color[i] == c) 
+        {
             return false;
         }
     }
     return true;
 }
 
-bool graphColoringUtil(int graph[var][var], int m, int color[], int v) {
-    if (v == var) {
+bool graphColoringUtil(int graph[var][var], int m, int color[], int v) 
+{
+    if (v == var) 
+    {
         return true;
     }
 
     for (int c = 0; c < m; c++) {
-        if (isSafe(v, color, graph, c)) {
+        if (isSafe(v, color, graph, c)) 
+        {
             color[v] = c;
-            if (graphColoringUtil(graph, m, color, v + 1)) {
+            if (graphColoringUtil(graph, m, color, v + 1)) 
+            {
                 return true;
             }
             color[v] = -1;
@@ -38,26 +44,31 @@ bool graphColoringUtil(int graph[var][var], int m, int color[], int v) {
     return false;
 }
 
-bool graphColoring(int graph[var][var], int m) {
+bool graphColoring(int graph[var][var], int m) 
+{
     int color[var];
-    for (int i = 0; i < var; i++) {
+    for (int i = 0; i < var; i++) 
+    {
         color[i] = -1;
     }
 
-    if (!graphColoringUtil(graph, m, color, 0)) {
+    if (!graphColoringUtil(graph, m, color, 0)) 
+    {
         cout << "Solution does not exist" << endl;
         return false;
     }
 
     cout << "Solution exists: Following are the assigned colors" << endl;
     cout << "Variable\tColor" << endl;
-    for (int i = 0; i < var; i++) {
+    for (int i = 0; i < var; i++) 
+    {
         cout << char('A' + i) << "\t\t" << COLORS[color[i]] << endl;
     }
     return true;
 }
 
-int main() {
+int main() 
+{
     int graph[var][var] = {0};
 
     // Define the connections
