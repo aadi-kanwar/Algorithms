@@ -1,0 +1,2 @@
+mon(os).
+tue(toc).
